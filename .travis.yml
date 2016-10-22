@@ -12,3 +12,6 @@ cache:
 install:
   - npm i -g npm@latest
   - npm install
+
+env:
+  - FANART_KEY=bd2753f04538b01479e39e695308b921
