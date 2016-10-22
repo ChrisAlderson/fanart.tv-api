@@ -5,8 +5,6 @@ const assert = chai.assert;
 
 const FanartTVAPI = require("../fanart.tv-api");
 
-
-
 describe("Fanart.tv", () => {
 
   let fanart, movieId, tvId, artistId, albumId, labelId;

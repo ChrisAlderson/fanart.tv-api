@@ -18,7 +18,7 @@ npm install --save fanart.tv-api
 const FanartAPI = require("fanart.tv-api");
 
 // Options are the request default options.
-const fanartAPI = new FanartAPI({api_key, [options , debug]}) {
+const fanartAPI = new FanartAPI({api_key, [options , debug]})
 ```
 
 #### Example usage
