@@ -9,7 +9,7 @@ fanart.getMovieImages("10195")
   .then(res => console.log(res))
   .catch(err => console.error(err));
 
-fanart.getLastestMoviesImages()
+fanart.getLatestMoviesImages()
   .then(res => console.log(res))
   .catch(err => console.error(err));
 
@@ -17,7 +17,7 @@ fanart.getShowImages("75682")
   .then(res => console.log(res))
   .catch(err => console.error(err));
 
-fanart.getLastestShowsImages()
+fanart.getLatestShowsImages()
   .then(res => console.log(res))
   .catch(err => console.error(err));
 

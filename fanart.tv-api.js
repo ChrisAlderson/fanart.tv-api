@@ -41,7 +41,7 @@ module.exports = class FanartTVAPI {
     });
   }
 
-  getLastestMoviesImages() {
+  getLatestMoviesImages() {
     return this._get("movies/latest", {
       api_key: FanartTVAPI.api_key
     });
@@ -53,7 +53,7 @@ module.exports = class FanartTVAPI {
     });
   }
 
-  getLastestShowsImages() {
+  getLatestShowsImages() {
     return this._get("tv/latest", {
       api_key: FanartTVAPI.api_key
     });

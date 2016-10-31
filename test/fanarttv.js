@@ -28,8 +28,8 @@ describe("Fanart.tv", () => {
   });
 
 
-  it("getLastestMoviesImages", done => {
-    fanart.getLastestMoviesImages().then(res => {
+  it("getLatestMoviesImages", done => {
+    fanart.getLatestMoviesImages().then(res => {
       assert.isArray(res);
       done();
     }).catch(err => done(err));
@@ -44,8 +44,8 @@ describe("Fanart.tv", () => {
   });
 
 
-  it("getLastestShowsImages", done => {
-    fanart.getLastestShowsImages().then(res => {
+  it("getLatestShowsImages", done => {
+    fanart.getLatestShowsImages().then(res => {
       assert.isArray(res);
       done();
     }).catch(err => done(err));

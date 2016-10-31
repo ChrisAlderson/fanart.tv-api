@@ -24,9 +24,9 @@ const fanartAPI = new FanartAPI({api_key, [options , debug]})
 #### Example usage
 ```js
  - fanart.getMovieImages(movieId)
- - fanart.getLastestMoviesImages()
+ - fanart.getLatestMoviesImages()
  - fanart.getShowImages(tvId)
- - fanart.getLastestShowsImages()
+ - fanart.getLatestShowsImages()
  - fanart.getArtistImages(artistId)
  - fanart.getAlbumImages(albumId)
  - fanart.getLabelImages(labelId)
