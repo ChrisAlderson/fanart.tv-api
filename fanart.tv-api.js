@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
-const request = require("request");
-const querystring = require("querystring");
+const request = require('request');
+const querystring = require('querystring');
 
 const defaultOptions = {
-  baseUrl: "http://webservice.fanart.tv/v3/",
+  baseUrl: 'http://webservice.fanart.tv/v3/',
   timeout: 5 * 1000
 };
 
@@ -42,7 +42,7 @@ module.exports = class FanartTVAPI {
   }
 
   getLatestMoviesImages() {
-    return this._get("movies/latest", {
+    return this._get('movies/latest', {
       api_key: FanartTVAPI.api_key
     });
   }
@@ -54,7 +54,7 @@ module.exports = class FanartTVAPI {
   }
 
   getLatestShowsImages() {
-    return this._get("tv/latest", {
+    return this._get('tv/latest', {
       api_key: FanartTVAPI.api_key
     });
   }
@@ -78,7 +78,7 @@ module.exports = class FanartTVAPI {
   }
 
   getLatestArtistsImages() {
-    return this._get("music/latest", {
+    return this._get('music/latest', {
       api_key: FanartTVAPI.api_key
     });
   }
