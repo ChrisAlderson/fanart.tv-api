@@ -23,64 +23,64 @@ describe('Fanart.tv', () => {
   it('getMovieImages', done => {
     fanart.getMovieImages(movieId).then(res => {
       assert.isObject(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getLatestMoviesImages', done => {
     fanart.getLatestMoviesImages().then(res => {
       assert.isArray(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getShowImages', done => {
     fanart.getShowImages(tvId).then(res => {
       assert.isObject(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getLatestShowsImages', done => {
     fanart.getLatestShowsImages().then(res => {
       assert.isArray(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getArtistImages', done => {
     fanart.getArtistImages(artistId).then(res => {
       assert.isObject(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getAlbumImages', done => {
     fanart.getAlbumImages(albumId).then(res => {
       assert.isObject(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getLabelImages', done => {
     fanart.getLabelImages(labelId).then(res => {
       assert.isObject(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
   it('getLatestArtistsImages', done => {
     fanart.getLatestArtistsImages().then(res => {
       assert.isArray(res);
-      done();
-    }).catch(err => done(err));
+      setTimeout(done, 1000);
+    }).catch(err => setTimeout(() => done(err), 1000));
   });
 
 
