@@ -1,6 +1,6 @@
 {
   "name": "fanart.tv-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Fanart.tv API wrapper for NodeJS.",
   "dependencies": {
     "request": "^2.79.0"
