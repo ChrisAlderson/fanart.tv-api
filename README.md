@@ -1,6 +1,7 @@
 # fanart.tv-api
 
 [![Build Status](https://travis-ci.org/ChrisAlderson/fanart.tv-api.svg?branch=master)](https://travis-ci.org/ChrisAlderson/fanart.tv-api)
+[![Coverage Status](https://coveralls.io/repos/github/ChrisAlderson/fanart.tv-api/badge.svg?branch=master)](https://coveralls.io/github/ChrisAlderson/fanart.tv-api?branch=master)
 [![Dependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api)
 [![devDependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api/dev-status.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api#info=devDependencies)
 
