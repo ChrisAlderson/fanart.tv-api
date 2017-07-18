@@ -1,86 +1,90 @@
-'use strict';
+'use strict'
 
-const { assert } = require('chai');
-
-const FanartTVAPI = require('../fanart.tv-api');
+const { expect } = require('chai')
+const FanartTVAPI = require('../fanart.tv-api')
 
 describe('Fanart.tv', () => {
 
-  let fanart, movieId, tvId, artistId, albumId, labelId;
+  let fanart, movieId, tvId, artistId, albumId, labelId
+
   before(() => {
+    console.warn = () => {}
     fanart = new FanartTVAPI({
-      api_key: process.env.FANART_KEY
-    });
+      apiKey: process.env.FANART_KEY,
+      debug: true
+    })
 
-    movieId = '10195';
-    tvId = '75682';
-    artistId = 'f4a31f0a-51dd-4fa7-986d-3095c40c5ed9';
-    albumId = '9ba659df-5814-32f6-b95f-02b738698e7c';
-    labelId = 'e832b688-546b-45e3-83e5-9f8db5dcde1d';
-  });
+    movieId = '10195'
+    tvId = '75682'
+    artistId = 'f4a31f0a-51dd-4fa7-986d-3095c40c5ed9'
+    albumId = '9ba659df-5814-32f6-b95f-02b738698e7c'
+    labelId = 'e832b688-546b-45e3-83e5-9f8db5dcde1d'
+  })
 
-  it('getMovieImages', done => {
+  it('should throw an error when there is no apiKey', () => {
+    try {
+      const fanartApi = new FanartTVAPI()
+      expect(fanartApi).to.be.an('object')
+    } catch (err) {
+      expect(err).to.be.an('Error')
+    }
+  })
+
+  it('should get movie images', done => {
     fanart.getMovieImages(movieId).then(res => {
-      assert.isObject(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('object')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getLatestMoviesImages', done => {
+  it('shoud get latest movies images', done => {
+    fanart._debug = false
     fanart.getLatestMoviesImages().then(res => {
-      assert.isArray(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('array')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getShowImages', done => {
+  it('should get show images', done => {
     fanart.getShowImages(tvId).then(res => {
-      assert.isObject(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('object')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getLatestShowsImages', done => {
+  it('should get latest shows images', done => {
     fanart.getLatestShowsImages().then(res => {
-      assert.isArray(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('array')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getArtistImages', done => {
+  it('should get artist images', done => {
     fanart.getArtistImages(artistId).then(res => {
-      assert.isObject(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('object')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getAlbumImages', done => {
+  it('should get album images', done => {
     fanart.getAlbumImages(albumId).then(res => {
-      assert.isObject(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('object')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getLabelImages', done => {
+  it('should get label images', done => {
     fanart.getLabelImages(labelId).then(res => {
-      assert.isObject(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('object')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-  it('getLatestArtistsImages', done => {
+  it('should get latest artists images', done => {
     fanart.getLatestArtistsImages().then(res => {
-      assert.isArray(res);
-      setTimeout(done, 1000);
-    }).catch(err => setTimeout(() => done(err), 1000));
-  });
+      expect(res).to.be.an('array')
+      setTimeout(done, 1000)
+    }).catch(err => setTimeout(() => done(err), 1000))
+  })
 
-
-});
+})
