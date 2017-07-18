@@ -15,10 +15,10 @@ npm install --save fanart.tv-api
 
 #### Initialize
 ```js
-const FanartAPI = require('fanart.tv-api');
+const FanartAPI = require('fanart.tv-api')
 
 // Options are the request default options.
-const fanartAPI = new FanartAPI({api_key, [options , debug]})
+const fanartAPI = new FanartAPI({apiKey, [options , debug]})
 ```
 
 #### Example usage
@@ -42,7 +42,7 @@ FANART_KEY=[YOUR API KEY HERE] npm test
 
 MIT License
 
-Copyright (c) 2016 - fanart.tv-api - Released under the MIT license.
+Copyright (c) 2017 - fanart.tv-api - Released under the MIT license.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
