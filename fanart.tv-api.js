@@ -61,4 +61,5 @@ module.exports = class FanartTVAPI {
   getLatestArtistsImages() {
     return this._get('music/latest')
   }
+
 }

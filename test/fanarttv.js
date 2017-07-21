@@ -4,7 +4,6 @@ const { expect } = require('chai')
 const FanartTVAPI = require('../fanart.tv-api')
 
 describe('Fanart.tv', () => {
-
   let fanart, movieId, tvId, artistId, albumId, labelId
 
   before(() => {
@@ -86,5 +85,4 @@ describe('Fanart.tv', () => {
       setTimeout(done, 1000)
     }).catch(err => setTimeout(() => done(err), 1000))
   })
-
 })
