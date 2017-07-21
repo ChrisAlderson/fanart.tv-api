@@ -1,11 +1,51 @@
 'use strict'
 
+// Import the necessary modules.
 const { expect } = require('chai')
 const FanartTvApi = require('../fanart.tv-api')
 
+/** @test {FanartTvApi} */
 describe('Fanart.tv', () => {
-  let fanart, movieId, tvId, artistId, albumId, labelId
+  /**
+   * The FanartTvApi instance.
+   * @type {FanartTvApi}
+   */
+  let fanart
 
+  /**
+   * The movie id to get.
+   * @type {string}
+   */
+  let movieId
+
+  /**
+   * The tv show id to get.
+   * @type {string}
+   */
+  let tvId
+
+  /**
+   * The artist id to get.
+   * @type {string}
+   */
+  let artistId
+
+  /**
+   * The album id to get.
+   * @type {string}
+   */
+  let albumId
+
+  /**
+   * The label id to get.
+   * @type {string}
+   */
+  let labelId
+
+  /**
+   * Hook for setting up the FanartTvApi tests.
+   * @type {Function}
+   */
   before(() => {
     console.warn = () => {}
     fanart = new FanartTvApi({
@@ -20,6 +60,7 @@ describe('Fanart.tv', () => {
     labelId = 'e832b688-546b-45e3-83e5-9f8db5dcde1d'
   })
 
+  /** @test {FanartTvApi#constructor} */
   it('should throw an error when there is no apiKey', () => {
     try {
       const fanartApi = new FanartTvApi()
@@ -29,6 +70,7 @@ describe('Fanart.tv', () => {
     }
   })
 
+  /** @test {FanartTvApi#getMovieImages} */
   it('should get movie images', done => {
     fanart.getMovieImages(movieId).then(res => {
       expect(res).to.be.an('object')
@@ -36,6 +78,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getLatestMoviesImages} */
   it('shoud get latest movies images', done => {
     fanart = new FanartTvApi({
       apiKey: process.env.FANART_KEY
@@ -46,6 +89,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getShowImages} */
   it('should get show images', done => {
     fanart.getShowImages(tvId).then(res => {
       expect(res).to.be.an('object')
@@ -53,6 +97,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getLatestShowsImages} */
   it('should get latest shows images', done => {
     fanart.getLatestShowsImages().then(res => {
       expect(res).to.be.an('array')
@@ -60,6 +105,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getArtistImages} */
   it('should get artist images', done => {
     fanart.getArtistImages(artistId).then(res => {
       expect(res).to.be.an('object')
@@ -67,6 +113,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getAlbumImages} */
   it('should get album images', done => {
     fanart.getAlbumImages(albumId).then(res => {
       expect(res).to.be.an('object')
@@ -74,6 +121,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getLabelImages} */
   it('should get label images', done => {
     fanart.getLabelImages(labelId).then(res => {
       expect(res).to.be.an('object')
@@ -81,6 +129,7 @@ describe('Fanart.tv', () => {
     }).catch(done)
   })
 
+  /** @test {FanartTvApi#getLatestArtistsImages} */
   it('should get latest artists images', done => {
     fanart.getLatestArtistsImages().then(res => {
       expect(res).to.be.an('array')
