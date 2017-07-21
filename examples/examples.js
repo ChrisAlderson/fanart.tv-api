@@ -2,6 +2,8 @@
 
 // Import the necessary modules.
 const FanartTvApi = require('../fanart.tv-api')
+
+// Create a new instance of the module.
 const fanart = new FanartTvApi({
   apiKey: process.env.FANART_KEY
 })

@@ -2,26 +2,27 @@
 
 // Import the necessary modules.
 const got = require('got')
+
+// Create a new instance of the module.
 const { stringify } = require('querystring')
 
 /**
  * A Fanart.tv API wrapper for NodeJS.
  * @type {FanartTvApi}
  */
-// module.exports = class FanartTvApi {
-export default class FanartTvApi {
+module.exports = class FanartTvApi {
 
   /**
    * Create a new instance of the module.
    * @param {!Object} config={} - The configuration object for the module.
    * @param {!string} config.apiKey - Your fanart API key.
-   * @param {!string} config.baseUrl=http://webservice.fanart.tv/v3/ - The 
+   * @param {!string} config.baseUrl=https://webservice.fanart.tv/v3/ - The 
    * base url of the fanart API service.
    * @param {?boolean} [config.debug=false] - Show extra output.
    */
   constructor({
     apiKey,
-    baseUrl = 'http://webservice.fanart.tv/v3/',
+    baseUrl = 'https://webservice.fanart.tv/v3/',
     debug = false
   } = {}) {
     /**
