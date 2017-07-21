@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api)
 [![devDependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api/dev-status.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api#info=devDependencies)
 
-A Fanart.tv API wrapper for NodeJS.
+A [Fanart.tv](https://fanart.tv) API wrapper for NodeJS. For more information on the responses you can check the Fanart.tv API documentation [here](https://docs.fanrarttv.apiary.io/#).
 
 ## Usage
 
@@ -16,10 +16,15 @@ npm install --save fanart.tv-api
 
 #### Initialize
 ```js
-const FanartAPI = require('fanart.tv-api')
+// Import the necessary modules.
+const FanartTvApi = require('fanart.tv-api')
 
-// Options are the request default options.
-const fanartAPI = new FanartAPI({apiKey, [options , debug]})
+// Create a new instance of the module.
+const fanart = new FanartTvApi({
+  apiKey, // Your fanart.tv API key.
+  baseUrl, // Optional, the base url of the Fanart.tv API.
+  debug // Optional, debug mode for some extra output.
+})
 ```
 
 #### Example usage
