@@ -47,7 +47,9 @@ describe('Fanart.tv', () => {
    * @type {Function}
    */
   before(() => {
+    // Disable the warn logging function to testing.
     console.warn = () => {}
+
     fanart = new FanartTvApi({
       apiKey: process.env.FANART_KEY,
       debug: true
