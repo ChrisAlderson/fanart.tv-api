@@ -40,8 +40,10 @@ const fanart = new FanartTvApi({
 ```
 
 ## Testing
+
+You can run tests with the following npm command:
 ```
-FANART_KEY=[YOUR API KEY HERE] npm test
+ $ FANART_KEY=[YOUR API KEY HERE] npm test
 ```
 
 # License
