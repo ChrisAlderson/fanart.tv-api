@@ -5,7 +5,7 @@ const { expect } = require('chai')
 const FanartTvApi = require('../fanart.tv-api')
 
 /** @test {FanartTvApi} */
-describe('Fanart.tv', () => {
+describe('FanartTvApi', () => {
   /**
    * The FanartTvApi instance.
    * @type {FanartTvApi}

@@ -8,7 +8,7 @@ const fanart = new FanartTvApi({
   apiKey: process.env.FANART_KEY
 })
 
-// An example of all the available functions chained together. 
+// An example of all the available functions chained together.
 fanart.getMovieImages('10195').then(res => {
   console.log(res)
   return fanart.getLatestMoviesImages()
@@ -32,4 +32,3 @@ fanart.getMovieImages('10195').then(res => {
   return fanart.getLatestArtistsImages()
 }).then(res => console.log(res))
   .catch(err => console.error(err))
-

@@ -16,7 +16,7 @@ module.exports = class FanartTvApi {
    * Create a new instance of the module.
    * @param {!Object} config={} - The configuration object for the module.
    * @param {!string} config.apiKey - Your fanart API key.
-   * @param {!string} config.baseUrl=https://webservice.fanart.tv/v3/ - The 
+   * @param {!string} config.baseUrl=https://webservice.fanart.tv/v3/ - The
    * base url of the fanart API service.
    * @param {?boolean} [config.debug=false] - Show extra output.
    */
@@ -88,7 +88,7 @@ module.exports = class FanartTvApi {
   }
 
   /**
-   * Get show images based on the given id. 
+   * Get show images based on the given id.
    * @param {!string} id - The id of the show you want images of.
    * @returns {Promise<Object, Error>} - The promise to get images from a
    * show.
@@ -127,7 +127,7 @@ module.exports = class FanartTvApi {
   }
 
   /**
-   * Get label images based on the given id. 
+   * Get label images based on the given id.
    * @param {!string} id - The id of the label you want images of.
    * @returns {Promise<Object, Error>} - The promise to get images from a
    * label.
