@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api)
 [![devDependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api/dev-status.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api#info=devDependencies)
 
-A [Fanart.tv](https://fanart.tv) API wrapper for NodeJS. For more information on the responses you can check the Fanart.tv API documentation [here](https://docs.fanrarttv.apiary.io/#).
+A [Fanart.tv](https://fanart.tv) API wrapper for NodeJS. For more information on the responses you can check the Fanart.tv API documentation [here](https://docs.fanarttv.apiary.io/#).
 
 ## Usage
 
