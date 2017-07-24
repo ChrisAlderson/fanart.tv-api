@@ -103,7 +103,6 @@ describe('FanartTvApi', () => {
     testImagesArrays(toTest)
   }
 
-
   /** @test {FanartTvApi#constructor} */
   it('should throw an error when there is no apiKey', () => {
     try {
