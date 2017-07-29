@@ -21,8 +21,8 @@ const FanartTvApi = require('fanart.tv-api')
 // Create a new instance of the module.
 const fanart = new FanartTvApi({
   apiKey, // Your fanart.tv API key.
-  baseUrl, // Optional, the base url of the Fanart.tv API.
-  debug // Optional, debug mode for some extra output.
+  baseUrl, // The base url of fanart.tv. Defaults to 'https://webservice.fanart.tv/v3/'.
+  debug // Show extra output. Defaults to 'false'.
 })
 ```
 
