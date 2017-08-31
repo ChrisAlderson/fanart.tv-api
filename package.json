@@ -29,7 +29,7 @@
     "tv",
     "api"
   ],
-  "main": "fanart.tv-api.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChrisAlderson/fanart.tv-api.git"

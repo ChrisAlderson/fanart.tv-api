@@ -1,6 +1,6 @@
 // Import the necessary modules.
 /* eslint-disable no-console */
-const FanartTvApi = require('../fanart.tv-api')
+const FanartTvApi = require('..')
 
 // Create a new instance of the module.
 const fanart = new FanartTvApi({

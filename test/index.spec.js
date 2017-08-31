@@ -1,7 +1,7 @@
 // Import the necessary modules.
 const { expect } = require('chai')
 
-const FanartTvApi = require('../fanart.tv-api')
+const FanartTvApi = require('..')
 
 /** @test {FanartTvApi} */
 describe('FanartTvApi', () => {
