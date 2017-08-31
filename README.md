@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/ChrisAlderson/fanart.tv-api.svg?branch=master)](https://travis-ci.org/ChrisAlderson/fanart.tv-api)
 [![Coverage Status](https://coveralls.io/repos/github/ChrisAlderson/fanart.tv-api/badge.svg?branch=master)](https://coveralls.io/github/ChrisAlderson/fanart.tv-api?branch=master)
 [![Dependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api)
-[![devDependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api/dev-status.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api#info=devDependencies)
+[![devDependency Status](https://david-dm.org/ChrisAlderson/fanart.tv-api/dev-status.svg)](https://david-dm.org/ChrisAlderson/fanart.tv-api?type=dev)
 
 A [Fanart.tv](https://fanart.tv) API wrapper for NodeJS. For more information on the responses you can check the Fanart.tv API documentation [here](http://docs.fanarttv.apiary.io/#).
 
@@ -21,8 +21,7 @@ const FanartTvApi = require('fanart.tv-api')
 // Create a new instance of the module.
 const fanart = new FanartTvApi({
   apiKey, // Your fanart.tv API key.
-  baseUrl, // The base url of fanart.tv. Defaults to 'https://webservice.fanart.tv/v3/'.
-  debug // Show extra output. Defaults to 'false'.
+  baseUrl // The base url of fanart.tv. Defaults to 'https://webservice.fanart.tv/v3/'.
 })
 ```
 

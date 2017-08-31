@@ -1,7 +1,6 @@
-'use strict'
-
 // Import the necessary modules.
 const { expect } = require('chai')
+
 const FanartTvApi = require('../fanart.tv-api')
 
 /** @test {FanartTvApi} */
@@ -47,12 +46,8 @@ describe('FanartTvApi', () => {
    * @type {Function}
    */
   before(() => {
-    // Disable the warn logging function to testing.
-    console.warn = () => {}
-
     fanart = new FanartTvApi({
-      apiKey: process.env.FANART_KEY,
-      debug: true
+      apiKey: process.env.FANART_KEY
     })
 
     movieId = '10195'
@@ -76,7 +71,7 @@ describe('FanartTvApi', () => {
 
   /**
    * Test all the arrays of images.
-   * @param {Object] res - The object with image arrays.
+   * @param {Object} res - The object with image arrays.
    * @returns {undefined}
    */
   function testImagesArrays(res) {

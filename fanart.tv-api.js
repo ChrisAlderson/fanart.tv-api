@@ -1,8 +1,9 @@
-'use strict'
-
 // Import the necessary modules.
+const debug = require('debug')
 const got = require('got')
 const { stringify } = require('querystring')
+
+const { name } = require('./package')
 
 /**
  * The image model.
@@ -34,9 +35,9 @@ const { stringify } = require('querystring')
 /**
  * The latest movie images model.
  * @typedef {Object} LatestMoviesImages
- * @property {string} tmdb_id The tmdb id of the movie. 
- * @property {string} imdb_id The imdb id of the movie. 
- * @property {string} name The name of the movie. 
+ * @property {string} tmdb_id The tmdb id of the movie.
+ * @property {string} imdb_id The imdb id of the movie.
+ * @property {string} name The name of the movie.
  * @property {string} new_images The amount of new images.
  * @property {string} total_images The amount of total images.
  */
@@ -130,29 +131,15 @@ module.exports = class FanartTvApi {
 
   /**
    * Create a new instance of the module.
-   * @param {!Object} config={} - The configuration object for the module.
+   * @param {!Object} config - The configuration object for the module.
    * @param {!string} config.apiKey - Your fanart API key.
    * @param {!string} config.baseUrl=https://webservice.fanart.tv/v3/ - The
    * base url of the fanart API service.
-   * @param {?boolean} [config.debug=false] - Show extra output.
    */
   constructor({
     apiKey,
-    baseUrl = 'https://webservice.fanart.tv/v3/',
-    debug = false
-  } = {}) {
-    /**
-     * The base url of the fanart API service.
-     * @type {string}
-     */
-    this._baseUrl = baseUrl
-
-    /**
-     * Show extra output.
-     * @type {boolean}
-     */
-    this._debug = debug
-
+    baseUrl = 'https://webservice.fanart.tv/v3/'
+  }) {
     if (!apiKey) {
       throw new Error(`No API key given!`)
     }
@@ -161,7 +148,17 @@ module.exports = class FanartTvApi {
      * Your fanart API key.
      * @type {string}
      */
-    FanartTvApi.apiKey = apiKey
+    this.apiKey = apiKey
+    /**
+     * The base url of the fanart API service.
+     * @type {string}
+     */
+    this._baseUrl = baseUrl
+    /**
+     * Show extra output.
+     * @type {Function}
+     */
+    this._debug = debug(name)
   }
 
   /**
@@ -175,14 +172,12 @@ module.exports = class FanartTvApi {
       api_key: FanartTvApi.apiKey
     }
 
-    if (this._debug) {
-      console.warn(`Making request to: '${uri}?${stringify(query)}`)
-    }
+    this._debug(`Making request to: '${uri}?${stringify(query)}`)
 
     return got.get(uri, {
       query,
       json: true
-    }).then(({body}) => body)
+    }).then(({ body }) => body)
   }
 
   /**
