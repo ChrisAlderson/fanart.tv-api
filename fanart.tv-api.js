@@ -169,7 +169,7 @@ module.exports = class FanartTvApi {
   _get(endpoint) {
     const uri = `${this._baseUrl}${endpoint}`
     const query = {
-      api_key: FanartTvApi.apiKey
+      api_key: this.apiKey
     }
 
     this._debug(`Making request to: '${uri}?${stringify(query)}`)

@@ -101,10 +101,11 @@ describe('FanartTvApi', () => {
   /** @test {FanartTvApi#constructor} */
   it('should throw an error when there is no apiKey', () => {
     try {
-      const fanartApi = new FanartTvApi()
+      const fanartApi = new FanartTvApi({})
       expect(fanartApi).to.be.an('object')
     } catch (err) {
       expect(err).to.be.an('Error')
+      expect(err.message).to.equal('No API key given!')
     }
   })
 
